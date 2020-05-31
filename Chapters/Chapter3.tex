@@ -1,0 +1,18 @@
+% Chapter Template
+
+\chapter{Proposed Methodology} % Main chapter title
+
+\label{Chapter3} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
+
+\lhead{Chapter 3. \emph{Proposed Methodology}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
+
+The proposal of the method used to recognise a sample EEG signal is as follows:
+\begin{enumerate}
+    \item We select a dataset containing (EEG signal, Emotion) data pair. In this project, MAHNOB-HCI Dataset is used.
+    \item The EEG files from the selected dataset is first cropped to extract the brain activity of the time only when the external stimuli is applied.
+    \item The cropped data is divided into chunks of equal size.
+    \item Each channel of every chunk is processed by multiple functions, where each function outputs one or more values, corresponding to a feature.
+    \item All the features of a single channel are collected. The respective features are averaged, if desired, else all of them are appended.
+    \item The feature vector thus obtained is supplied as data to the ML model, which is trained to for this supervised learning task.
+    \item For predicting the emotion from an external EEG signal, it needs to be passed through the same pipeline, and it might give more than one output values (which depends on the size of the test data). The output of the complete EEG reading can be interpreted by any reduction method, such as mean, median and mode.
+\end{enumerate}

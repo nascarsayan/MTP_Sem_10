@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1561px" height="866px" viewBox="0 0 1561 866" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 64 (93537) - https://sketch.com -->
+    <title>Untitled</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="654" y="65" width="802" height="742"></rect>
+        <filter x="-3.6%" y="-3.9%" width="108.0%" height="108.6%" filterUnits="objectBoundingBox" id="filter-2">
+            <feMorphology radius="0.5" operator="dilate" in="SourceAlpha" result="shadowSpreadOuter1"></feMorphology>
+            <feOffset dx="3" dy="3" in="shadowSpreadOuter1" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="10" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"></feComposite>
+            <feColorMatrix values="0 0 0 0 0.866666667   0 0 0 0 0.866666667   0 0 0 0 0.866666667  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" stroke="#1976F1" stroke-width="3" fill="#FFFFFF" x="4.5" y="3.5" width="1555" height="861"></rect>
+        <g id="Rectangle">
+            <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+            <use stroke-opacity="0.650622815" stroke="#F8F8F8" stroke-width="1" fill="#F8F8F8" fill-rule="evenodd" xlink:href="#path-1"></use>
+        </g>
+        <text id="Physiological-Measur" fill="#1976F1" font-family="SFProDisplay-Regular, SF Pro Display" font-size="40" font-weight="normal">
+            <tspan x="816.083984" y="137">Physiological Measurements</tspan>
+        </text>
+        <g id="Camera" transform="translate(106.000000, 99.000000)">
+            <rect id="Rectangle" fill="#1976F1" x="0" y="0" width="302" height="102"></rect>
+            <text id="Audio-Channels" fill="#FFFFFF" font-family="SFProDisplay-Regular, SF Pro Display" font-size="40" font-weight="normal">
+                <tspan x="19.0175781" y="65">Audio Channels</tspan>
+            </text>
+        </g>
+        <g id="Camera-Copy" transform="translate(702.000000, 284.000000)">
+            <rect id="Rectangle" fill="#1976F1" x="0" y="0" width="228" height="102"></rect>
+            <text id="EEG" fill="#FFFFFF" font-family="SFProDisplay-Regular, SF Pro Display" font-size="40" font-weight="normal">
+                <tspan x="77.7792969" y="65">EEG</tspan>
+            </text>
+        </g>
+        <g id="Camera-Copy-2" transform="translate(1180.000000, 284.000000)">
+            <rect id="Rectangle" fill="#1976F1" x="0" y="0" width="228" height="102"></rect>
+            <text id="ECG" fill="#FFFFFF" font-family="SFProDisplay-Regular, SF Pro Display" font-size="40" font-weight="normal">
+                <tspan x="75.1035156" y="65">ECG</tspan>
+            </text>
+        </g>
+        <g id="Audio" transform="translate(106.000000, 284.000000)">
+            <rect id="Rectangle" fill="#1976F1" x="0" y="0" width="302" height="102"></rect>
+            <text id="Camera-Views" fill="#FFFFFF" font-family="SFProDisplay-Regular, SF Pro Display" font-size="40" font-weight="normal">
+                <tspan x="30.5605469" y="65">Camera Views</tspan>
+            </text>
+        </g>
+        <g id="Audio-Copy" transform="translate(837.000000, 469.000000)">
+            <rect id="Rectangle" fill="#1976F1" x="0" y="0" width="436" height="102"></rect>
+            <text id="Respiration-Amplitud" fill="#FFFFFF" font-family="SFProDisplay-Regular, SF Pro Display" font-size="40" font-weight="normal">
+                <tspan x="34.3183594" y="65">Respiration Amplitude</tspan>
+            </text>
+        </g>
+        <g id="Audio-Copy-4" transform="translate(837.000000, 654.000000)">
+            <rect id="Rectangle" fill="#1976F1" x="0" y="0" width="436" height="102"></rect>
+            <text id="Skin-Temperature" fill="#FFFFFF" font-family="SFProDisplay-Regular, SF Pro Display" font-size="40" font-weight="normal">
+                <tspan x="72.6972656" y="65">Skin Temperature</tspan>
+            </text>
+        </g>
+        <g id="Audio-Copy-3" transform="translate(106.000000, 469.000000)">
+            <rect id="Rectangle" fill="#1976F1" x="0" y="0" width="302" height="102"></rect>
+            <text id="Eye-Gaze-Data" fill="#FFFFFF" font-family="SFProDisplay-Regular, SF Pro Display" font-size="40" font-weight="normal">
+                <tspan x="29.3105469" y="65">Eye Gaze Data</tspan>
+            </text>
+        </g>
+        <g id="Audio-Copy-2" transform="translate(106.000000, 654.000000)">
+            <rect id="Rectangle" fill="#1976F1" x="0" y="0" width="302" height="102"></rect>
+            <text id="Metadata" fill="#FFFFFF" font-family="SFProDisplay-Regular, SF Pro Display" font-size="40" font-weight="normal">
+                <tspan x="71.2832031" y="65">Metadata</tspan>
+            </text>
+        </g>
+    </g>
+</svg>
