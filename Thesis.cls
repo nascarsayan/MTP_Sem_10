@@ -342,7 +342,7 @@ Under the supervision of \par
 \end {center}
 \vspace{1cm}
 I certify that\par
-\begin{enumerate}[label=(\alph*)]
+\begin{enumerate}[(a)]
 \item The work contained in this report has been done by me under the guidance of my supervisor.
 \item The work has not been submitted to any other Institute for any degree or diploma.
 \item I have conformed to the norms and guidelines given in the Ethical Code of Conduct of the Institute.

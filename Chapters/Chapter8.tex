@@ -1,0 +1,19 @@
+% Chapter Template
+
+\chapter{Conclusion and Future Work} % Main chapter title
+
+\label{Chapter8} % Change X to a consecutive number; for referencing this chapter elsewhere, use \ref{ChapterX}
+
+\lhead{Chapter 8. \emph{Conclusion and Future Work}} % Change X to a consecutive number; this is for the header on each page - perhaps a shortened title
+
+From the experimental results, we conclude that:
+\begin{enumerate}
+    \item XGB performs slightly better than Random Forest in all the models.
+    \item Performing Standardization and Baseline Removal on the data during preprocessing gives good results most of the time.
+    \item Performing only baseline removal of the data without using standardization gives poor results.
+    \item Averaging the features from the channels is not a good idea, because then there is too much information loss.
+    \item Data from outside the dataset, signifying a new subject, when input to the trained XGBoost model resulted in only around 60 percent accuracy. So the model performs well on subjects and experimental conditions from within the dataset, but not on data collected using unforeseen methods.
+    \item The plots about feature importance shows that Wavelet Transformation Parameters, AR parameters and PSD are very important features for the classification.
+\end{enumerate}
+
+The code is packaged and uploaded into \href{https://github.com/nascarsayan/mahnob-emotion-detection}{this github repository}. In the future, the code be extended to include more models, and the performance on unseen subjects can be improved.

@@ -28,7 +28,16 @@ Each Biosemi Data Format (BDF) file contains 47 channels out of which channels 1
 
 \begin{figure}[H]
 \centering
-\includegraphics[height=13cm]{Figures/experiment_flow.png}
+\includegraphics[height=17cm]{Figures/experiment_flow.png}
 \caption{Experiment flow}
 \label{fig22}
 \end{figure}
+
+The ground truth or labels for the emotion elicitation experiments consist of four orthogonal axes of measurement of emotion or affect:
+\begin{enumerate}
+    \item \textbf{Valence}: Valence is a psychological quality or quantity that depicts or measures, respectively, how attractive or averse the object of interest is perceived to be.
+    \item \textbf{Arousal}: Arousal is a psychological measure that quantifies or qualifies how much stimulated the subject is. The psychological state of being awoken or active is measured by this value.
+    \item \textbf{Control}: Control is a affective measurement that depicts how much control the subject has on his action and interpretation of events. ``People want their experiences to reflect the way that they see the world, so that the \textbf{does} of human behavior matches the \textbf{should} of human behavior as they see it.''(Affect Control Theory, Franklin College of Arts and Sciences, University of Georgia).
+    \item \textbf{Prediction}: The predictability of the next events to occur by observing the events uptil now is measured using this scale.
+\end{enumerate}
+The labels in the dataset are integers in the range ${1, 2, \ldots 9}$, where 1 means the lowest and 9 means the highest values of that axis of measurement. 
