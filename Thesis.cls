@@ -93,7 +93,7 @@
 \if@twocolumn\hbox{}\newpage\fi\fi\fi}
 \usepackage{amsmath,amsfonts,amssymb,amscd,amsthm,xspace}
 
-\usepackage{enumitem}
+% \usepackage{enumitem}
 \usepackage{ragged2e}
 \usepackage{tabularx}
 \usepackage{tabu}

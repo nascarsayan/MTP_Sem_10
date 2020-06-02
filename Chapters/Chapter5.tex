@@ -11,18 +11,18 @@ The model overview is shown below. The EEG data from the MAHNOB-HCI datatset is 
 \begin{figure}[H]
 \centering
 % \hspace*{-1.5cm}
-\includegraphics[height=9cm]{Figures/built_model.png}
+\includegraphics[height=9cm]{built_model.png}
 \caption{Model Overview}
-\label{fig22}
+\label{fig-5-1}
 \end{figure}
 
 \section{Preprocessing}
 
 \begin{figure}[H]
 \hspace*{-0.7cm}
-\includegraphics[height=8cm]{Figures/preprocess.png}
+\includegraphics[height=8cm]{preprocess.png}
 \caption{Preprocessing Steps}
-\label{fig23}
+\label{fig-5-2}
 \end{figure}
 
 \begin{enumerate}
@@ -31,7 +31,7 @@ The model overview is shown below. The EEG data from the MAHNOB-HCI datatset is 
 \item The data in between these intervals, \texttt{data[start:end]}, was cropped out and converted to a DataFrame.
 \item A window size, \texttt{win\_size} (in seconds), which can be controlled externally, was defined. The default value was 3.
 \item Simple signal preprocessing techniques like baseline removal and standardization can be used. The options can be tweaked while running the script \texttt{preprocess.py}.
-\item The \texttt{data[start:end]} was divided into chunks of \texttt{win\_size} seconds. The last chunk was dropped if its duration was lesser than \texttt{win\_size}. The sampling frequency of the dataset is 256 Hz. Hence, each chunk, \texttt{epoch}, was of size \texttt{32}\times(\texttt{256} * \texttt{win\_size}).
+\item The \texttt{data[start:end]} was divided into chunks of \texttt{win\_size} seconds. The last chunk was dropped if its duration was lesser than \texttt{win\_size}. The sampling frequency of the dataset is 256 Hz. Hence, each chunk, \texttt{epoch}, was of size \texttt{32}$ {\times}$ (\texttt{256} * \texttt{win\_size}).
 \end{enumerate}
 
 \section{Feature Extraction}
@@ -39,9 +39,9 @@ The model overview is shown below. The EEG data from the MAHNOB-HCI datatset is 
 
 \begin{figure}[H]
 \centering
-\includegraphics[height=7cm]{Figures/feat_extract.png}
+\includegraphics[height=7cm]{feat_extract.png}
 \caption{Feature Extraction Pipeline}
-\label{fig23}
+\label{fig-5-3}
 \end{figure}
 
 29 features were extracted from every \texttt{winsize} seconds window for all the 32 channels, resulting in a total $29 * 32 = 928$ features for every \texttt{epoch}. The features extracted from each channel are described below:
@@ -115,16 +115,16 @@ This feature extraction step was controlled by another parameter. The user might
 
 \begin{figure}[H]
 \centering
-\includegraphics[height=7cm]{Figures/feat_channel_concat.png}
+\includegraphics[height=7cm]{feat_channel_concat.png}
 \caption{Features from all channels appended}
-\label{fig23}
+\label{fig-5-4}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[height=7cm]{Figures/feat_channel_avg.png}
+\includegraphics[height=7cm]{feat_channel_avg.png}
 \caption{Features from all channels averaged}
-\label{fig23}
+\label{fig-5-5}
 \end{figure}
 
 \section{Classification Model}
@@ -133,9 +133,9 @@ The features extracted from the \hyperref[sec:featureExtraction]{previous sectio
 
 \begin{figure}[H]
 \hspace*{-1.5cm}
-\includegraphics[height=7cm]{Figures/train_test.png}
+\includegraphics[height=7cm]{train_test.png}
 \caption{Classification Model}
-\label{fig23}
+\label{fig-5-6}
 \end{figure}
 
 The process of producing the train and test set from the input data is described below:
@@ -154,21 +154,21 @@ The process of producing the train and test set from the input data is described
         \item The number of classes \texttt{num\_classes} into which the raw labels, \texttt{Y\_raw}, are to be divided can be configured by the user. By default this value is 3.
         \item The raw label values are binned into \texttt{num\_classes}, and is named \texttt{Y}. So, finally the values in the labels are in the range \texttt{0 - num\_classes}
     \end{enumerate}
-    \item For each of the 4 labels (\textbf{V}alence, \textbf{A}rousal, \textbf{C}ontrol and \textbf{P}rediction, the column \texttt{y} is extracted as the label, and 928 columns are used as rows for training an ML model.
+    \item For each of the 4 labels (\textbf{V}alence, \textbf{A}rousal, \textbf{C}ontrol and \textbf{P}rediction), the column \texttt{y} is extracted as the label, and 928 columns are used as rows for training an ML model.
     \item The type of model on which the data is to be trained is also configurable by the user. Currently, Random Forest and XGBoost have been used as they are one of the best ML models using bagging and boosting methods, respectively, and are used actively in research.
     \item The performance metrics and feature importance of the trained model are calculated and plotted finally.
 \end{enumerate}
 
 \begin{figure}[H]
 \centering
-\includegraphics[height=5cm]{Figures/extract_features_help.png}
+\includegraphics[height=5cm]{extract_features_help.png}
 \caption{\texttt{extract\_features}}
-\label{fig23}
+\label{fig-5-7}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[height=6.2cm]{Figures/classify_help.png}
+\includegraphics[height=6.2cm]{classify_help.png}
 \caption{\texttt{classify}}
-\label{fig23}
+\label{fig-5-8}
 \end{figure}

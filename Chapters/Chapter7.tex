@@ -35,40 +35,61 @@ There were a total of 16 models. The models are labelled as \texttt{(p\_)*\_{m}\
     % \end{enumerate}
 \end{enumerate}
 
-% Please add the following required packages to your document preamble:
-% \usepackage{multirow}
 \begin{table}[t]
 \caption{Accuracy in Percentage} % title of Table
 \centering
 \hspace*{-1.8cm}
 \begin{tabular}{cc|c|c|c|c|c|c|c|c|}
 \cline{3-10}
-                                            &     & \multicolumn{4}{c|}{Train}               & \multicolumn{4}{c|}{Test}                \\ \cline{3-10} 
-                                            &     & Valence & Arousal & Control & Prediction & Valence & Arousal & Control & Prediction \\ \hline
-\multicolumn{1}{|c|}{\multirow{r}}    & rf  & 88.44   & 88.88   & 88.05   & 85.16      & 82.76   & 85.50   & 86.08   & 80.87      \\ \cline{2-10} 
-\multicolumn{1}{|c|}{}                      & xgb & 89.97   & 86.61   & 90.33   & 86.42      & \cellcolor[HTML]{FFFC9E}\textbf{85.80}   & 85.70   & \cellcolor[HTML]{FFFC9E}\textbf{87.73}   & 83.51      \\ \hline
-\multicolumn{1}{|c|}{\multirow{b}}    & rf  & 79.01   & 79.10   & 79.10   & 73.20      & 67.87   & 68.15   & 70.17   & 62.87      \\ \cline{2-10} 
-\multicolumn{1}{|c|}{}                      & xgb & 82.47   & 80.85   & 80.58   & 77.21      & 71.27   & 70.21   & 72.54   & 66.95      \\ \hline
-\multicolumn{1}{|c|}{\multirow{s}}    & rf  & 88.71   & 89.60   & 89.04   & 85.54      & 81.59   & 83.85   & 86.01   & 78.57      \\ \cline{2-10} 
-\multicolumn{1}{|c|}{}                      & xgb & \cellcolor[HTML]{FFFC9E}\textbf{90.92}   & \cellcolor[HTML]{FFFC9E}\textbf{92.33}   & \cellcolor[HTML]{FFFC9E}\textbf{91.67}   & \cellcolor[HTML]{FFFC9E}\textbf{90.55}      & 84.68   & \cellcolor[HTML]{FFFC9E}\textbf{87.56}   & 86.84   & \cellcolor[HTML]{FFFC9E}\textbf{85.60}      \\ \hline
-\multicolumn{1}{|c|}{\multirow{b\_s}} & rf  & 88.02   & 90.27   & 89.13   & 85.87      & 80.29   & 84.50   & 85.64   & 79.23      \\ \cline{2-10} 
-\multicolumn{1}{|c|}{}                      & xgb & \cellcolor[HTML]{FFFC9E}\textbf{90.92}   & \cellcolor[HTML]{FFFC9E}\textbf{92.33}   & \cellcolor[HTML]{FFFC9E}\textbf{91.67}   & \cellcolor[HTML]{FFFC9E}\textbf{90.55}      & 84.68   & \cellcolor[HTML]{FFFC9E}\textbf{87.56}   & 86.84   & \cellcolor[HTML]{FFFC9E}\textbf{85.60}      \\ \hline
-\multicolumn{1}{|c|}{\multirow{a\_r}}    & rf  & 72.66   & 76.59   & 76.65   & 67.72      & 64.35   & 70.62   & 72.75   & 62.63      \\ \cline{2-10} 
-\multicolumn{1}{|c|}{}                      & xgb & 73.95   & 76.81   & 79.85   & 74.13      & 69.32   & 72.61   & 76.86   & 70.93      \\ \hline
-\multicolumn{1}{|c|}{\multirow{a\_b}} & rf  & 67.31   & 68.02   & 67.33   & 63.16      & 56.56   & 59.72   & 60.00   & 53.38      \\ \cline{2-10} 
-\multicolumn{1}{|c|}{}                      & xgb & 64.36   & 65.87   & 66.45   & 62.40      & 55.54   & 58.18   & 59.44   & 54.20      \\ \hline
-\multicolumn{1}{|c|}{\multirow{a\_s}} & rf  & 66.28   & 67.70   & 67.87   & 66.05      & 58.00   & 61.19   & 60.75   & 57.35      \\ \cline{2-10} 
-\multicolumn{1}{|c|}{}                      & xgb & 65.20   & 66.93   & 67.96   & 64.44      & 58.48   & 61.23   & 61.40   & 56.91      \\ \hline
-\multicolumn{1}{|c|}{\multirow{a\_b\_s}} & rf & 66.27 & 68.43 & 67.67 & 66.60 & 57.32 & 62.11 & 60.37 & 57.56 \\ \cline{2-10} 
-\multicolumn{1}{|c|}{}                      & xgb & 65.20   & 66.94   & 67.96   & 64.44      & 58.48   & 61.23   & 61.40   & 56.91      \\ \hline
+                                                &     & \multicolumn{4}{c|}{Train}               & \multicolumn{4}{c|}{Test}                \\ \cline{3-10} 
+                                                &     & Valence & Arousal & Control & Prediction & Valence & Arousal & Control & Prediction \\ \hline
+\multicolumn{1}{|c|}{}                          & rf  & 88.44   & 88.88   & 88.05   & 85.16      & 82.76   & 85.50   & 86.08   & 80.87      \\ \cline{2-10} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{r}} &
+  xgb &
+  89.97 &
+  86.61 &
+  90.33 &
+  86.42 &
+  \cellcolor[HTML]{FFFC9E}\textbf{85.80} &
+  85.70 &
+  \cellcolor[HTML]{FFFC9E}\textbf{87.73} &
+  83.51 \\ \hline
+\multicolumn{1}{|c|}{}                          & rf  & 79.01   & 79.10   & 79.10   & 73.20      & 67.87   & 68.15   & 70.17   & 62.87      \\ \cline{2-10} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{b}}       & xgb & 82.47   & 80.85   & 80.58   & 77.21      & 71.27   & 70.21   & 72.54   & 66.95      \\ \hline
+\multicolumn{1}{|c|}{}                          & rf  & 88.71   & 89.60   & 89.04   & 85.54      & 81.59   & 83.85   & 86.01   & 78.57      \\ \cline{2-10} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{s}} &
+  xgb &
+  \cellcolor[HTML]{FFFC9E}\textbf{90.92} &
+  \cellcolor[HTML]{FFFC9E}\textbf{92.33} &
+  \cellcolor[HTML]{FFFC9E}\textbf{91.67} &
+  \cellcolor[HTML]{FFFC9E}\textbf{90.55} &
+  84.68 &
+  \cellcolor[HTML]{FFFC9E}\textbf{87.56} &
+  86.84 &
+  \cellcolor[HTML]{FFFC9E}\textbf{85.60} \\ \hline
+\multicolumn{1}{|c|}{}                          & rf  & 88.02   & 90.27   & 89.13   & 85.87      & 80.29   & 84.50   & 85.64   & 79.23      \\ \cline{2-10} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{b\_s}} &
+  xgb &
+  \cellcolor[HTML]{FFFC9E}\textbf{90.92} &
+  \cellcolor[HTML]{FFFC9E}\textbf{92.33} &
+  \cellcolor[HTML]{FFFC9E}\textbf{91.67} &
+  \cellcolor[HTML]{FFFC9E}\textbf{90.55} &
+  84.68 &
+  \cellcolor[HTML]{FFFC9E}\textbf{87.56} &
+  86.84 &
+  \cellcolor[HTML]{FFFC9E}\textbf{85.60} \\ \hline
+\multicolumn{1}{|c|}{}                          & rf  & 72.66   & 76.59   & 76.65   & 67.72      & 64.35   & 70.62   & 72.75   & 62.63      \\ \cline{2-10} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{a\_r}}    & xgb & 73.95   & 76.81   & 79.85   & 74.13      & 69.32   & 72.61   & 76.86   & 70.93      \\ \hline
+\multicolumn{1}{|c|}{}                          & rf  & 67.31   & 68.02   & 67.33   & 63.16      & 56.56   & 59.72   & 60.00   & 53.38      \\ \cline{2-10} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{a\_b}}    & xgb & 64.36   & 65.87   & 66.45   & 62.40      & 55.54   & 58.18   & 59.44   & 54.20      \\ \hline
+\multicolumn{1}{|c|}{}                          & rf  & 66.28   & 67.70   & 67.87   & 66.05      & 58.00   & 61.19   & 60.75   & 57.35      \\ \cline{2-10} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{a\_s}}    & xgb & 65.20   & 66.93   & 67.96   & 64.44      & 58.48   & 61.23   & 61.40   & 56.91      \\ \hline
+\multicolumn{1}{|c|}{}                          & rf  & 66.27   & 68.43   & 67.67   & 66.60      & 57.32   & 62.11   & 60.37   & 57.56      \\ \cline{2-10} 
+\multicolumn{1}{|c|}{\multirow{-2}{*}{a\_b\_s}} & xgb & 65.20   & 66.94   & 67.96   & 64.44      & 58.48   & 61.23   & 61.40   & 56.91      \\ \hline
 \end{tabular}
 \end{table}
 
 
-% Please add the following required packages to your document preamble:
-% \usepackage{multirow}
-% \usepackage[table,xcdraw]{xcolor}
-% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
 \begin{table}[t]
 \caption{Precision and Recall of Test Dataset} % title of Table
 \centering
@@ -99,7 +120,7 @@ There were a total of 16 models. The models are labelled as \texttt{(p\_)*\_{m}\
   0.85 &
   0.86 &
   0.81 \\ \cline{2-10} 
-\multicolumn{1}{|c|}{\multirow{r}} &
+\multicolumn{1}{|c|}{\multirow{-2}{*}{r}} &
   xgb &
   \cellcolor[HTML]{FFFC9E}\textbf{0.86} &
   0.86 &
@@ -119,7 +140,7 @@ There were a total of 16 models. The models are labelled as \texttt{(p\_)*\_{m}\
   0.68 &
   0.70 &
   0.63 \\ \cline{2-10} 
-\multicolumn{1}{|c|}{\multirow{b}} &
+\multicolumn{1}{|c|}{\multirow{-2}{*}{b}} &
   xgb &
   0.72 &
   0.71 &
@@ -139,7 +160,7 @@ There were a total of 16 models. The models are labelled as \texttt{(p\_)*\_{m}\
   0.84 &
   0.86 &
   0.79 \\ \cline{2-10} 
-\multicolumn{1}{|c|}{\multirow{s}} &
+\multicolumn{1}{|c|}{\multirow{-2}{*}{s}} &
   xgb &
   0.85 &
   \cellcolor[HTML]{FFFC9E}\textbf{0.88} &
@@ -159,7 +180,7 @@ There were a total of 16 models. The models are labelled as \texttt{(p\_)*\_{m}\
   0.85 &
   0.86 &
   0.79 \\ \cline{2-10} 
-\multicolumn{1}{|c|}{\multirow{b\_s}} &
+\multicolumn{1}{|c|}{\multirow{-2}{*}{b\_s}} &
   xgb &
   0.85 &
   \cellcolor[HTML]{FFFC9E}\textbf{0.88} &
@@ -179,7 +200,7 @@ There were a total of 16 models. The models are labelled as \texttt{(p\_)*\_{m}\
   0.71 &
   0.73 &
   0.63 \\ \cline{2-10} 
-\multicolumn{1}{|c|}{\multirow{a\_r}} &
+\multicolumn{1}{|c|}{\multirow{-2}{*}{a}} &
   xgb &
   0.70 &
   0.74 &
@@ -199,7 +220,7 @@ There were a total of 16 models. The models are labelled as \texttt{(p\_)*\_{m}\
   0.60 &
   0.60 &
   0.53 \\ \cline{2-10} 
-\multicolumn{1}{|c|}{\multirow{a\_b}} &
+\multicolumn{1}{|c|}{\multirow{-2}{*}{a\_b}} &
   xgb &
   0.56 &
   0.58 &
@@ -219,7 +240,7 @@ There were a total of 16 models. The models are labelled as \texttt{(p\_)*\_{m}\
   0.61 &
   0.61 &
   0.57 \\ \cline{2-10} 
-\multicolumn{1}{|c|}{\multirow{a\_s}} &
+\multicolumn{1}{|c|}{\multirow{-2}{*}{a\_s}} &
   xgb &
   0.59 &
   0.61 &
@@ -239,7 +260,7 @@ There were a total of 16 models. The models are labelled as \texttt{(p\_)*\_{m}\
   0.62 &
   0.60 &
   0.58 \\ \cline{2-10} 
-\multicolumn{1}{|c|}{\multirow{a\_b\_s}} &
+\multicolumn{1}{|c|}{\multirow{-2}{*}{a\_b\_s}} &
   xgb &
   0.59 &
   0.61 &
@@ -261,32 +282,32 @@ The tables above show the train and test accuracy, and precision and recall on t
 \begin{figure}[H]
 \centering
 \hspace*{-1.5cm}
-\includegraphics[height=10cm]{Figures/res_roc__b_s_xgb.png}
+\includegraphics[height=10cm]{res_roc__b_s_xgb.png}
 \caption{ROC Curve}
-\label{fig23}
+\label{fig-7-1}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \hspace*{-1.5cm}
-\includegraphics[height=10cm]{Figures/res_feature_importance__b_s_xgb.png}
+\includegraphics[height=10cm]{res_feature_importance__b_s_xgb.png}
 \caption{Feature Importances}
-\label{fig23}
+\label{fig-7-2}
 \end{figure}
 
 \subsection{\texttt{r\_\_xgb}}
 \begin{figure}[H]
 \centering
 \hspace*{-1.5cm}
-\includegraphics[height=10cm]{Figures/res_roc__r_xgb.png}
+\includegraphics[height=10cm]{res_roc__r_xgb.png}
 \caption{ROC Curve}
-\label{fig23}
+\label{fig-7-3}
 \end{figure}
 
 \begin{figure}[H]
 \centering
 \hspace*{-1.5cm}
-\includegraphics[height=10cm]{Figures/res_feature_importance__r_xgb.png}
+\includegraphics[height=10cm]{res_feature_importance__r_xgb.png}
 \caption{Feature Importances}
-\label{fig23}
+\label{fig-7-4}
 \end{figure}

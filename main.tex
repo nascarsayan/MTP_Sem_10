@@ -9,8 +9,8 @@
 \usepackage{tasks}
 \usepackage{amssymb}
 
-\usepackage{lineno,hyperref}
-\modulolinenumbers[5]
+% \usepackage{lineno,hyperref}
+% \modulolinenumbers[5]
 
 \usepackage[table,xcdraw]{xcolor}
 \usepackage{amssymb}
@@ -23,13 +23,12 @@
 \usepackage{url}
 \usepackage{numprint}
 \usepackage{caption}
-\usepackage{enumerate}
 
 \usepackage{booktabs}  
 \usepackage{siunitx}
 %\usepackage[showframe=false]{geometry}
 \usepackage{subfigure}
-\usepackage[hashEnumerators,smartEllipses]{markdown}
+\usepackage{multirow}
 
 \nprounddigits{3}
 \newcolumntype{P}[1]{>{\centering\arraybackslash}p{#1}}
@@ -47,8 +46,8 @@
 }
 
 %\usepackage{subcaption} %incompatible with subfig
-\graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
-\usepackage{natbib} % Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' v
+\graphicspath{{Figures/}} % Specifies the directory where pictures are stored
+\usepackage[square,sort,comma,numbers]{natbib} % Use the natbib reference package - read up on this to edit the reference style; if you want text (e.g. Smith et al., 2012) for the in-text references (instead of numbers), remove 'numbers' v
 
 \hypersetup{urlcolor=black, colorlinks=false} % Colors hyperlinks in blue - change to black if annoyingv`	
 
@@ -112,7 +111,7 @@
 %----------------------------------------------------------------------------------------
 
 
-\Declaration% Add a gap in the Contents, for aesthetics
+\Declaration % Add a gap in the Contents, for aesthetics
 
 
 %----------------------------------------------------------------------------------------
@@ -132,8 +131,7 @@
 \addtotoc{Abstract} % Add the "Abstract" page entry to the Contents
 
 \abstract{\addtocontents{toc}{} % Add a gap in the Contents, for aesthetics
-
-Enter content here. 
+The topic of interest is Emotion Recognition and Estimation. If a machine can recognize the emotional state of the user, it will be possible to automate tasks taking into account the current emotional state of the user. There are several ways to recognize emotional states, and here we will use EEG signals for this task.
 }
 
 \clearpage % Start a new page
@@ -148,8 +146,7 @@ Enter content here.
 
 \acknowledgements{\addtocontents{toc}{}%\vspace{1em}} % Add a gap in the Contents, for aesthetics
 
-I would like to sincerely thank Prof. Debasis Samanta and Miss Sricheta Parui for their guidance.
-
+I would like to sincerely thank Professor Debasis Samanta and Miss Sricheta Parui for their valuable guidance. They've supported me in both good and bad times and have been quite understanding. 
 }
 \clearpage % Start a new page
 
@@ -240,14 +237,13 @@ I would like to sincerely thank Prof. Debasis Samanta and Miss Sricheta Parui fo
 % ----------------------------------------------------------------------------------------
 % 	BIBLIOGRAPHY
 % ----------------------------------------------------------------------------------------
-\nocite{*}
+% \nocite{*}
 \label{Bibliography}
 
 \lhead{\emph{Bibliography}} % Change the page header to say "Bibliography"
 
-\bibliographystyle{bibstyle} % Use the "custom" BibTeX style for formatting the Bibliography
+\bibliographystyle{abbrv} % Use the "custom" BibTeX style for formatting the Bibliography
 
 \bibliography{Bibliography} % The references (bibliography) information are stored in the file named "Bibliography.bib"
-\nocite{*}
 
 \end{document}  
